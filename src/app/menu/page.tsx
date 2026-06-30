@@ -60,7 +60,7 @@ export default function MenuPage() {
     <div className="pt-24 pb-20 bg-bg">
       <div className="max-w-[800px] mx-auto px-6">
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={prefersReduced ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="font-display text-5xl md:text-6xl text-ink mb-16"

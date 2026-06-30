@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
       href="https://wa.me/919099058602?text=Hi%201224%20Dessert%20Cafe!%20I%20want%20to%20place%20an%20order."
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-12 h-12 bg-ink text-white rounded-full flex items-center justify-center hover:bg-red transition-colors duration-300"
+      className="fixed bottom-6 right-6 z-50 w-12 h-12 bg-ink text-white rounded-full flex items-center justify-center hover:bg-red transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-red focus-visible:outline-offset-2"
       aria-label="Order on WhatsApp"
     >
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">

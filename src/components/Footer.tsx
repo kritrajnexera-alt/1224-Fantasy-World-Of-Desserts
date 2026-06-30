@@ -1,6 +1,16 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-bg">
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="border-t border-border bg-bg"
+    >
       <div className="max-w-[1200px] mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
@@ -35,6 +45,6 @@ export default function Footer() {
           <p>Ankleshwar, Gujarat.</p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

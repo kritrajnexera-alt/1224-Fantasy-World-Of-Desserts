@@ -78,7 +78,7 @@ export default function ContactPage() {
             transition={{ delay: 0.25 }}
           >
             <h2 className="font-nav text-[11px] tracking-[4px] uppercase text-muted mb-3">Find us on the map</h2>
-            <div className="w-full aspect-[4/3] border border-border bg-highlight flex items-center justify-center">
+            <div className="w-full aspect-[4/3] border border-border bg-highlight flex items-center justify-center relative">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1000!2d72.9971!3d21.6267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1"
                 width="100%"
@@ -88,7 +88,11 @@ export default function ContactPage() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="1224 Dessert Cafe location"
+                className="absolute inset-0"
               />
+              <span className="absolute bottom-2 left-2 text-[11px] font-nav tracking-[2px] uppercase text-muted pointer-events-none">
+                G7, Orange Height, GIDC, Ankleshwar
+              </span>
             </div>
           </motion.div>
         </motion.div>
