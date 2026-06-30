@@ -55,14 +55,14 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[90dvh] flex items-center justify-center overflow-hidden bg-bg pt-16">
+      <section className="relative min-h-[90dvh] grid md:grid-cols-2 overflow-hidden bg-bg pt-16">
         <HeroWatermark />
-        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+        <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-16 md:py-0">
           <motion.h1
             initial={h1From}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeArr }}
-            className="font-display text-5xl sm:text-[72px] md:text-[96px] leading-[0.95] text-ink"
+            className="font-display text-5xl sm:text-[72px] md:text-[80px] lg:text-[96px] leading-[0.95] text-ink"
             style={{ fontStyle: 'italic', fontWeight: 300 }}
           >
             Desserts
@@ -81,7 +81,7 @@ export default function Home() {
             initial={pFrom}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-4"
+            className="mt-8 flex flex-wrap gap-4"
           >
             <Link
               href="/menu"
@@ -99,6 +99,17 @@ export default function Home() {
               Order on WhatsApp
             </a>
           </motion.div>
+        </div>
+        <div className="relative z-10 md:min-h-0 overflow-hidden bg-highlight">
+          <motion.img
+            initial={prefersReduced ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=700&h=900&fit=crop"
+            alt="Signature waffle with fresh berries"
+            className="w-full h-full object-cover"
+            style={{ minHeight: '50dvh' }}
+          />
         </div>
       </section>
 
